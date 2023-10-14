@@ -25,7 +25,9 @@ SECRET_KEY = 'django-insecure-rksf@o4tao95i9lzhx!ilr+vd$$sx!hdfk#vtmb*q3!f2=9tm^
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    '192.168.8.119'
+]
 
 
 # Application definition
@@ -77,14 +79,12 @@ WSGI_APPLICATION = 'Lazo.wsgi.application'
 
 DATABASES = {
     'default': {
-        # 'ENGINE': 'django.db.backends.sqlite3',
-        # 'NAME': BASE_DIR / 'db.sqlite3',
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'lazo-db',
         'USER': 'postgres',
-        'PASSWORD': 'tudor',
+        'PASSWORD': 'tudor1903',
         'HOST': 'localhost',  # Or the host where your PostgreSQL server is running
-        'PORT': '5433',
+        'PORT': '5432',
     }
 }
 
