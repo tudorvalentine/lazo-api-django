@@ -16,7 +16,7 @@ admin.site.register(Order, OrderAdmin)
 
 
 class UserAdmin(admin.ModelAdmin):
-    list_display = ('username', 'email', 'registered')
+    list_display = ('id', 'username', 'email', 'registered')
 
 
 admin.site.register(User, UserAdmin)
@@ -30,11 +30,17 @@ admin.site.register(Brand, BrandAdmin)
 
 
 class ProductAdmin(admin.ModelAdmin):
-    list_display = ('name', 'type', 'price', 'brand', 'cover_image')
+    list_display = ('id', 'name', 'type', 'price', 'brand', 'cover_image')
 
 
 admin.site.register(Product, ProductAdmin)
-admin.site.register(Review)
+
+
+class ReviewAdmin(admin.ModelAdmin):
+    list_display = ('id', 'user', 'product', 'comment', 'rating', 'date_added')
+
+
+admin.site.register(Review, ReviewAdmin)
 admin.site.register(OrderItem)
 admin.site.register(Address)
 admin.site.register(PaymentCard)
